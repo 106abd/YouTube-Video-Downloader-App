@@ -1,6 +1,5 @@
 # Date Created(MM/DD/YY): 08/04/2022
 # Date Last Modified(MM/DD/YY): 09/06/2022
-# Author(First Last): Abdullah Khan
 # Software Description: A program that allows videos to be downloaded from any YouTube URL.
 
 # GUI Imports
