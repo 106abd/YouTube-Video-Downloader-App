@@ -7,7 +7,7 @@ from tkinter import *
 from tkinter.ttk import Progressbar
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from pytube import YouTube
+from pytubefix import YouTube
 from moviepy.editor import VideoFileClip
 from urllib.request import urlopen
 from threading import Thread
@@ -42,7 +42,7 @@ def displayThumbnail(userLink):  # Scan, render, and display thumbnail given the
     thumbnailURL = YouTube(userLink).thumbnail_url  # Store the thumbnail link in a variable
     thumbnailImage = urlopen(thumbnailURL)  # Retrieve the binary data of the thumbnail
     filteredThumbnail = Image.open(thumbnailImage)  # Create image using the binary data of the thumbnail
-    filteredThumbnail = filteredThumbnail.resize((260, 195), Image.ANTIALIAS)  # Scale image to the (x,y) dimensions
+    filteredThumbnail = filteredThumbnail.resize((260, 195), Image.LANCZOS)  # Scale image to the (x,y) dimensions
     filteredThumbnail = filteredThumbnail.crop((0, 20, 260, 175))  # Crop out black bars
     thumbnailRender = ImageTk.PhotoImage(filteredThumbnail)  # Render the filtered image
     thumbnailDisplay = Label(image=thumbnailRender)  # Create label for the rendered image
