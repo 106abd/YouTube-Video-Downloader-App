@@ -17,7 +17,7 @@ imageio-ffmpeg==0.4.7
 moviepy==1.0.3
 numpy==1.23.1
 pefile==2022.5.30
-Pillow>=9.1.0
+Pillow==9.2.0
 proglog==0.1.10
 pycparser==2.21
 pyinstaller==5.3
